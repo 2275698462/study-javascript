@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>第1个</li>
+    <li>第2个</li>
+    <li>第3个</li>
+    <li>第4个</li>
+    <li>第5个</li>
+    <p>我不需要变色</p>
+</ul>
+
+<script>
+    // 点击小 li，使当前 li 文字变为红色
+
+    // 获得父元素
+    const ul = document.querySelector('ul')
+    ul.addEventListener('click', function (e) {
+        // console.log(e.target) // 点击的那个对象
+        if (e.target.tagName === 'LI') {
+            e.target.style.color = 'red'
+        }
+    })
+</script>
+
+</body>
+</html>
