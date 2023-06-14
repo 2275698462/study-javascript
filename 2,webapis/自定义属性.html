@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div data-qq="1" data-ww="qwer">1</div>
+<div data-qq="2">2</div>
+<div data-qq="3">3</div>
+<div data-qq="4">4</div>
+<div data-qq="5">5</div>
+<script>
+    const one = document.querySelector('div')
+    console.log(one.dataset.ww) // qwer
+    console.log(one.dataset.qq) // 1
+</script>
+</body>
+</html>

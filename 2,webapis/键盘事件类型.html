@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<script>
+    const input = document.querySelector('input')
+    // input.addEventListener('keydown', function () {
+    //     console.log('键盘按下')
+    // })
+    //
+    // input.addEventListener('keyup', function () {
+    //     console.log('键盘弹起')
+    // })
+    // 文本事件
+    input.addEventListener('input', function () {
+        console.log(input.value)
+    })
+
+</script>
+</body>
+</html>

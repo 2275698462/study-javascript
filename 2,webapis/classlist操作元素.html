@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box {
+        width: 200px;
+        height: 200px;
+        color: #333;
+    }
+
+    .active {
+        color: red;
+        background-color: pink;
+    }
+</style>
+<body>
+<div class="box">文字</div>
+<script>
+    const box = document.querySelector('.box');
+    box.classList.add('active') // 类名不加.
+
+</script>
+
+</body>
+</html>

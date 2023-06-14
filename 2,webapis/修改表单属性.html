@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input class="i1" type="text" value="校花">
+<input class="i2" type="checkbox" name="" id="">
+<button disabled="disabled">点击</button>
+<script>
+    const uname = document.querySelector('.i1')
+    // 获取表单里面的值：表单.value
+    console.log(uname.value)
+    uname.value = '程序员校花'
+    uname.type = 'password'
+
+    // 获取复选框
+    const ipt = document.querySelector('.i2')
+    console.log(ipt.checked) // false
+    ipt.checked = true
+    ipt.checked = 'true666' // 也会选中，隐式转换成 true
+
+    // 获取按钮
+    const button = document.querySelector('button')
+    console.log(button.disabled)
+    button.disabled = false // 启用按钮
+</script>
+</body>
+</html>

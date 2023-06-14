@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let obj = {
+    uname: '校花',
+    age: 20,
+    song: function () {
+      console.log('唱歌')
+    }
+  }
+  for (let key in obj) {
+      document.write(obj[key])
+      document.write('<br>')
+  }
+  console.log(obj['song'])
+
+</script>
+
+</body>
+</html>

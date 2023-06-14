@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    setInterval(function () {
+        document.write('aa<br>')
+    }, 3000)
+
+    function fn() {
+        console.log('一秒执行一次')
+    }
+    let n = setInterval(fn, 1000) // 不用加小括号
+    // setInterval('fn()', 1000) // 少用写法
+    console.log(n)
+
+    // 关闭定时器
+    clearInterval(n);
+
+</script>
+
+</body>
+</html>
