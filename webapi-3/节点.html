@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li class="a1">a</li>
+    <li>a</li>
+    <li>a</li>
+    <li>a</li>
+</ul>
+<script>
+
+    const div = document.createElement('div')
+    console.log(div)
+    document.body.appendChild(div)
+    const ul = document.querySelector('ul')
+    const li = document.createElement('li')
+    li.innerHTML = '我是li'
+    // ul.appendChild(li)
+    ul.insertBefore(li, ul.children[0])
+
+    ul.cloneNode(布尔值)
+</script>
+
+</body>
+</html>
