@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log(document === window.document)
+    function fn(){
+        console.log(11)
+    }
+    window.fn()
+    var num = 10
+    console.log(window.num)
+    let timeout = setTimeout(function () {
+        console.log('校花')
+    }, 2000)
+    console.log(timeout)
+
+</script>
+
+</body>
+</html>

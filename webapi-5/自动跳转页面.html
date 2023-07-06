@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    span {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<a href="http://baidu.com"><span>5</span>秒后跳到百度</a>
+<script>
+    const a = document.querySelector('a')
+    // 开启定时器
+    let num = 5
+    let timeId = setInterval(function () {
+      num--
+      a.innerHTML = `<span>${num}</span>秒后跳到百度`
+      if (num === 0) {
+        // 停止定时器，并跳转
+        console.log(timeId)
+        location.href = 'http://baidu.com'
+      }
+    }, 1000)
+
+</script>
+</body>
+</html>
