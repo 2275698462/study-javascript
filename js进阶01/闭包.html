@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function outer() {
+    //     let a = 10
+    //     function fn() {
+    //         console.log(a)
+    //     }
+    //     fn()
+    // }
+    // outer()
+
+    // 外部可以访问使用函数内部的变量
+    function outer() {
+        let a = 100
+        function fn() {
+            console.log(a)
+        }
+        return fn
+    }
+    // outer() === fn === function fn() { console.log(a) }
+    const fun = outer()
+
+    fun() // 调用函数，实现外部（fun()）调用函数内部的变量（a）
+
+    function fn() {
+        let count = 1
+        function fun() {
+            count++
+            console.log(`函数被调用了${count}次`)
+        }
+        return fun
+    }
+    const result = fn()
+    result() // 2
+    result() // 3
+
+
+</script>
+</body>
+</html>

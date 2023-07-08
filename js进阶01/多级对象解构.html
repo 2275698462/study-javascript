@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // const pig = {
+    //     name: '佩奇',
+    //     family: {
+    //         mother: '猪妈妈',
+    //         father: '猪爸爸',
+    //         sister: '乔治',
+    //     }
+    // }
+    //
+    // const { name, family: { mother, father, sister } } = pig
+    // console.log(name) // 佩奇
+    // console.log(mother) // 猪妈妈
+
+    const pig = [
+        {
+            name: '佩奇',
+            family: {
+                mother: '猪妈妈',
+                father: '猪爸爸',
+                sister: '乔治',
+            },
+            age: 6
+        }
+    ]
+
+    const [ { family: { sister } } ] = pig
+    console.log(sister) // 乔治
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const fn = function () {
+        console.log(123)
+    }
+    // 箭头函数
+    const fn1 = (x) => {
+        console.log(x)
+    }
+    fn1('校花')
+
+    const fn2 = x => {
+        console.log(x)
+    }
+    fn2('校花')
+
+    // 省略 return
+    const fn3 = x => x + x
+    console.log(fn3(6))
+
+    // 返回对象
+    const fn5 = uname => ({uname: uname})
+    console.log(fn5('校花'))
+
+    const getSum = (...arr) => {
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        return sum
+    }
+    const result = getSum(1, 2, 3, 8)
+    console.log(result)
+</script>
+
+</body>
+</html>

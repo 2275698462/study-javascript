@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // const arr = ['red', 'green', 'pink']
+    // arr.forEach(function (item, index) {
+    //     console.log(item) // red green pink
+    //     console.log(index) // 0 1 2
+    // })
+
+    const arr = ['red', 'green', 'pink']
+    const newArr = arr.map(function (item, index) {
+        console.log(item) // red green pink
+        console.log(index) // 0 1 2
+        return item + '老师'
+    })
+    console.log(newArr)
+
+    // const arr = ['red', 'green', 'pink']
+    // console.log(arr.join('')) // redgreenpink
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // const uname = '程序员校花'
+    // const {uname: name, age} = {
+    //     // 把原来的 uname 变量重新命名为 name
+    //     uname: '校花',
+    //     age: 18
+    // }
+    // console.log(name) // 校花
+    // console.log(uname) // 程序员校花
+    // console.log(age) // 18
+
+    // const pig = [
+    //     {
+    //         uname: '佩奇',
+    //         age: 6
+    //     }
+    // ]
+    // const [{uname, age}] = pig
+    // console.log(uname) // 佩奇
+    // console.log(age) // 6
+
+    const {name: n1, age: a1} = {
+        name: '佩奇',
+        age: 66
+    }
+    console.log(n1)
+    console.log(a1)
+
+    const goods = [
+        {
+            goodsName: '小米',
+            price: 1999
+        }
+    ]
+
+    const [{goodsName, price}] = goods
+    console.log(goodsName)
+    console.log(price)
+</script>
+</body>
+</html>
