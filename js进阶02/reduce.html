@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // arr.reduce(function (上一次值, 当前值){}, 初始值)
+    const arr = [1, 5, 8]
+
+    // 没有初始值
+    const total1 = arr.reduce(function (prev, current) {
+        return prev + current
+    })
+
+    console.log(total1) // 14
+
+    // 有初始值
+    const total2 = arr.reduce((prev, current) => prev + current, 10)
+    console.log(total2) // 24
+
+    const arr2 = [
+        {
+            name: 'zs',
+            salary: 10000,
+        },
+        {
+            name: 'zs',
+            salary: 10000,
+        },
+        {
+            name: 'zs',
+            salary: 10000,
+        }
+    ]
+    const total3 = arr2.reduce((p, c) => p + c.salary, 0)
+    console.log(total3)
+</script>
+</body>
+</html>

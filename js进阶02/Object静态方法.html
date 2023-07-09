@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const o = {uname: '校花', age: 18}
+    // 获得所有的属性名
+    // console.log(Object.keys(o)) // 返回数组
+    //
+    // console.log(Object.values(o)) // 返回数组
+
+    const obj = {}
+    Object.assign(obj, o)
+    console.log(obj === o)
+
+    o.uname = 'aa'
+    console.log(obj)
+    console.log(o)
+
+    // const xh = {uname: '校花', age: 18}
+    // Object.assign( xh, {gender: '男'} )
+    // console.log(xh)
+
+</script>
+</body>
+</html>

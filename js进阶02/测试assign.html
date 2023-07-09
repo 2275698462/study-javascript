@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    const xh = {uname: '校花', age: 18}
+    const obj = {}
+    Object.assign(obj, xh)
+    console.log(obj === xh) // false，拷贝基本数据类型，为深拷贝
+
+    const xh2 = {xh}
+    const obj2 = {}
+    Object.assign(obj2, xh2)
+    console.log(xh2 === xh2) //true
+
+    // 熟悉简写语法
+    const xh3 = {uname: '校花', age: 18}
+    const obj3 = {xh} // {xh} === {xh: xh} === {xh: {uname: '校花', age: 18} }
+
+
+</script>
+</body>
+</html>
