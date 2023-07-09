@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Star() {
+
+    }
+    Star.prototype = {
+        // 需要重新指回构造函数
+        constructor: Star,
+        sing: function () {
+            console.log('唱歌')
+        },
+        dance: function () {
+            console.log('跳舞')
+        },
+    }
+    console.log(Star.prototype.constructor)
+    const s1 = new Star()
+    console.log(s1)
+
+
+    // const ldh = new Star()
+    // console.log(Star.prototype)
+
+</script>
+
+</body>
+</html>

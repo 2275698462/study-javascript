@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // 公共部分放到原型对象，即父构造函数
+    function Person() {
+        this.eays = 2
+        this.head = 1
+    }
+
+    function Woman() {
+
+    }
+
+    Woman.prototype = new Person()
+    // 指回原来的构造函数
+    Woman.prototype.constructor = Woman
+
+    // 给女人添加一个方法
+    Woman.prototype.baby = function () {
+        console.log('校花')
+    }
+    new Woman().baby() // 校花
+    function Man() {
+
+    }
+
+    Man.prototype = new Person()
+    Man.prototype.constructor = Man
+    // new Man().baby() // 报错
+
+</script>
+</body>
+</html>

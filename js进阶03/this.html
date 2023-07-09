@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let that
+    function Star(uname) {
+        that = this
+        // console.log(this)
+        this.uname = uname;
+
+    }
+    Star.prototype.sing = function () {
+        that = this
+    }
+
+    const ldh = new Star('刘德华')
+    console.log(that === ldh) // true
+
+</script>
+</body>
+</html>
