@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 500px;
+      background-color: #ccc;
+      color: #fff;
+      text-align: center;
+      font-size: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script src="lodash.min.js"></script>
+  <script>
+    const box = document.querySelector('.box')
+    let i = 1
+    function mouseMove () {
+      box.innerHTML = i++
+      // 如果里面存在大量消耗性能的代码，比如 dom 操作、数据处理，可能会造成卡顿
+    }
+    // box.addEventListener('mousemove', mouseMove)
+    box.addEventListener('mousemove', _.throttle(mouseMove, 2000))
+
+  </script>
+</body>
+
+</html>

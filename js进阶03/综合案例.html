@@ -94,13 +94,14 @@
         document.body.append(this.modalBox)
         this.modalBox.querySelector('i').addEventListener('click', () => {
             this.close()
+            // this.close() === document.querySelector('.modal').remove()
+            // document.querySelector('.modal').remove()
         })
     }
 
     Modal.prototype.close = function () {
         this.modalBox.remove()
     }
-
 
     document.querySelector('#delete').addEventListener('click', function () {
         new Modal('温馨提示', '无权限').open()

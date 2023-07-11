@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const xh = {
+        uname: '校花'
+    }
+    function fn(a) {
+        console.log(a)
+        console.log(this)
+    }
+    fn.call(xh, '程序员校花')
+
+</script>
+</body>
+</html>

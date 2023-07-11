@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="./lodash.min.js"></script>
+<script>
+  const oldObj = {
+    uname: '校花',
+    age: 18,
+    hobby: ['乒乓球', '足球']
+  }
+
+  const newObj = _.cloneDeep(oldObj)
+  newObj.hobby[0] = '铅球'
+  console.log(newObj)
+  console.log(oldObj)
+</script>
+</body>
+</html>

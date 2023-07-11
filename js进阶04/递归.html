@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div></div>
+<script>
+    let i = 1
+    function fn() {
+        console.log(`这是第${i}次`)
+        if (i >= 6) {
+            return
+        }
+        i++
+        fn()
+    }
+    fn()
+
+    function getTime() {
+        document.querySelector('div').innerHTML = new Date().toLocaleString()
+        setTimeout(getTime, 1000)
+    }
+    getTime()
+
+</script>
+</body>
+</html>

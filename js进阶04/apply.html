@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const xh = {
+        age: 18
+    }
+    function fn(x, y) {
+        console.log(this) // xh
+        console.log(x + y) // 3
+    }
+    fn.apply(xh,[1, 2])
+
+    // 使用场景：求数组最大值
+    const max1 = Math.max(1, 2, 3, 4)
+    console.log(max1) // 4
+    const max2 = Math.max.apply(Math, [1, 2, 3])
+    console.log(max2) // 3
+
+</script>
+</body>
+</html>
